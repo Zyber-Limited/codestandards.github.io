@@ -15,7 +15,8 @@ Use === instead of ==
 > Fail : if (val == 2)
 > Pass : if (val === 2)
 
- ### Scope & Variable declaration
+
+### Scope & Variable declaration
 
 Use `let` instead of `var` to avoid scoping issues in JavaScript.
 
@@ -27,15 +28,19 @@ Use `const` to define any variables that are not expected to be changed.
 > Fail : let GST_PERCENT = 15;
 > Pass : cost GST_PERCENT = 15
 
- ### Use of semicolons (;)
- Although this is optional in JavaScript as semicolons are not needed as statement terminators like other languages.  Using a `;`really helps to keep the code consistent and a great for statement separators and improved readability.
+
+### Use of semicolons (;)
+ 
+Although this is optional in JavaScript as semicolons are not needed as statement terminators like other languages.  Using a `;`really helps to keep the code consistent and a great for statement separators and improved readability.
 
 >**Fail**
+
 >const VAT_PERCENT = 20;
 >let amount = 10  
 >return addVat(amount, vatPercent)
 
 >**Pass**
+
 >const VAT_PERCENT = 20;  
 >let amount = 10;  
 >return addVat(amount, vatPercent);
