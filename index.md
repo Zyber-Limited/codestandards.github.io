@@ -183,8 +183,8 @@ Please ensure that functions only ever fulfil one task.
 If another developer joins you on your project, tries to build on it, or attempts to debug it or change it, they won't have to read through the _entire_ code document to figure out what code performs which functions.
 
 ### Commenting
-Use comments to
-Don't comment on the obvious.
+Always use comments to explain what your code/function is doing.
+Try to avoid commenting on the obvious or on simple self explanatory code.
 > **Fail**
 
     let  i  =  1;  // Setting i to 1;
