@@ -169,6 +169,14 @@ Switch statements should use `break` and have `default`
 		    break;  
     }
     
+### Ternary Operator
+Use the ternary operator for simplicity.
+
+    function getFee(isMember) {
+      return (isMember ? '$2.00' : '$10.00');
+    }
+
+
 ### A function's task
 Please ensure that functions only ever fulfil one task.
 
