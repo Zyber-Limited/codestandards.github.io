@@ -170,7 +170,7 @@ Switch statements should use `break` and have `default`
     }
     
 ### Ternary Operator
-Use the ternary operator for simplicity.
+Use the ternary operator for simplicity whenever possible.
 
     function getFee(isMember) {
       return (isMember ? '$2.00' : '$10.00');
