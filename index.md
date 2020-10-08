@@ -12,11 +12,17 @@ Use [Can I Use](https://caniuse.com/) to check browser support for any required 
 ### Naming Conventions
 
 `let` should be **camelCase**.
+
 `const` if at the top of a file use upper case **snake case** -> `MY_CONST` . 
+
 If not at the top of the file use **camelCase**.
+
 `class` should be **PascalCasing ** ->  `MyClass`.
+
 `functions` should be **camelCase**  -> `myFunction`.
+
 Function names should always relfect what the function is intended to do.
+
 File names should be **camelCase**  -> `myFile.js`.
 
 
@@ -100,6 +106,18 @@ An `if` within `if` can get messy and very hard to read, very quickly. Sometimes
         return addDiscountPercent(5);  
     }
     return addDiscountPercent(1);
+
+> **Fail**
+
+    if (valid) {   
+       return buy();  
+    } else {   
+       return error();  
+    }
+
+> Pass
+
+    return valid ? buy() : error();
 
 # PHP
 
