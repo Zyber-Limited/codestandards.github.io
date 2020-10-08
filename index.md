@@ -119,6 +119,21 @@ An `if` within `if` can get messy and very hard to read, very quickly. Sometimes
 
     return valid ? buy() : error();
 
+### Use of default parameters
+In JavaScript, if you don’t pass in a value into a parameter when calling a function it will be `undefined`
+
+> **Fail**
+
+    myFunction(a, b) {  
+	    return a + b;  
+    }
+
+> **Pass**
+
+    myFunction(a = 0, b = 0) {  
+    	return a + b;  
+    }
+
 # PHP
 
 All Php development  should be developed according to the [PSR 12](https://www.php-fig.org/psr/psr-12/) standard. 
