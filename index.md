@@ -12,10 +12,33 @@ Use [Can I Use](https://caniuse.com/) to check browser support for any required 
 ### Comparisons
 Use === instead of ==
 
-> **Fail : if (val == 2)**
-> **Pass : if (val === 2)**
+> Fail : if (val == 2)
+> Pass : if (val === 2)
 
-### Variable declaration
+ ### Scope & Variable declaration
+
+Use `let` instead of `var` to avoid scoping issues in JavaScript.
+
+> Fail : var myVar = 10;
+> Pass : let myVar = 10;
+
+Use `const` to define any variables that are not expected to be changed.
+
+> Fail : let GST_PERCENT = 15;
+> Pass : cost GST_PERCENT = 15
+
+ ### Use of semicolons (;)
+ Although this is optional in JavaScript as semicolons are not needed as statement terminators like other languages.  Using a `;`really helps to keep the code consistent and a great for statement separators and improved readability.
+
+>**Fail**
+>const VAT_PERCENT = 20;
+>let amount = 10  
+>return addVat(amount, vatPercent)
+
+>**Pass**
+>const VAT_PERCENT = 20;  
+>let amount = 10;  
+>return addVat(amount, vatPercent);
 
 # PHP
 
