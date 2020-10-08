@@ -9,6 +9,9 @@ The below documentation provides some best practices and standards to follow in 
 ## JavaScript
 Use [Can I Use](https://caniuse.com/) to check browser support for any required functionality.
 
+### Code Reusability
+Always structure your code in such a way that promotes code reuse. This will reduce time, effort and reduce coupling/dependency.
+
 ### Naming Conventions
 
 `let` should be **camelCase**.
@@ -68,7 +71,7 @@ Although this is optional in JavaScript as semicolons are not needed as statemen
 ### Reduce nesting
 An `if` within `if` can get messy and very hard to read, very quickly. Sometimes you may not be able to get around but always have a look at the structure of your JavaScript to see if you can change it around.
 > **Fail**
-> 
+
     if (myNumber > 0) {  
 	    if (myNumber > 100) {  
 		    if (!hasDiscountAlready) {  
@@ -133,6 +136,50 @@ In JavaScript, if you don’t pass in a value into a parameter when calling a fu
     myFunction(a = 0, b = 0) {  
     	return a + b;  
     }
+
+### Switch Statements
+Consider using switch statements if you come across a situation where you need to compare lot of values. It also makes reading easier.
+Switch statements should use `break` and have `default`
+> **Fail**
+
+    switch (myNumber)  
+    {  
+	    case 10:  
+		    addDiscountPercent(0);  
+	    case 20:  
+		    addDiscountPercent(2);  
+	    case 30:  
+		    addDiscountPercent(3);  
+    }
+> **Pass**
+
+    switch (myNumber)  
+    {  
+	    case 10:  
+		    addDiscountPercent(0);  
+		    break;  
+	    case 20:  
+		    addDiscountPercent(2);  
+		    break;  
+	    case 30:  
+		    addDiscountPercent(3);  
+		    break;  
+	    default:  
+		    addDiscountPercent(0);  
+		    break;  
+    }
+    
+### A function's task
+Please ensure that functions only ever fulfil one task.
+
+If another developer joins you on your project, tries to build on it, or attempts to debug it or change it, they won't have to read through the _entire_ code document to figure out what code performs which functions.
+
+### Commenting
+Use comments to
+Don't comment on the obvious.
+> **Fail**
+
+    let  i  =  1;  // Setting i to 1;
 
 # PHP
 
