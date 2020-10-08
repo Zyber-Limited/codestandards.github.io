@@ -13,6 +13,7 @@ Use [Can I Use](https://caniuse.com/) to check browser support for any required 
 Use === instead of ==
 
 > Fail : if (val == 2)
+
 > Pass : if (val === 2)
 
 
