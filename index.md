@@ -21,12 +21,14 @@ Use === instead of ==
 Use `let` instead of `var` to avoid scoping issues in JavaScript.
 
 > Fail : var myVar = 10;
+
 > Pass : let myVar = 10;
 
 Use `const` to define any variables that are not expected to be changed.
 
 > Fail : let GST_PERCENT = 15;
-> Pass : cost GST_PERCENT = 15
+
+> Pass : cost GST_PERCENT = 15;
 
 
 ### Use of semicolons (;)
@@ -35,15 +37,15 @@ Although this is optional in JavaScript as semicolons are not needed as statemen
 
 >**Fail**
 
->const VAT_PERCENT = 20;
->let amount = 10  
->return addVat(amount, vatPercent)
+> const VAT_PERCENT = 20;
+> let amount = 10  
+> return addVat(amount, vatPercent)
 
 >**Pass**
 
->const VAT_PERCENT = 20;  
->let amount = 10;  
->return addVat(amount, vatPercent);
+> const VAT_PERCENT = 20;  
+> let amount = 10;  
+> return addVat(amount, vatPercent);
 
 # PHP
 
