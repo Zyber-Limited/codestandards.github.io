@@ -62,6 +62,7 @@ Although this is optional in JavaScript as semicolons are not needed as statemen
 ### Reduce nesting
 An `if` within `if` can get messy and very hard to read, very quickly. Sometimes you may not be able to get around but always have a look at the structure of your JavaScript to see if you can change it around.
 > **Fail**
+> 
     if (myNumber > 0) {  
 	    if (myNumber > 100) {  
 		    if (!hasDiscountAlready) {  
