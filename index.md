@@ -12,16 +12,13 @@ Use [Can I Use](https://caniuse.com/) to check browser support for any required 
 ### Naming Conventions
 
 `let` should be **camelCase**.
-
 `const` if at the top of a file use upper case **snake case** -> `MY_CONST` . 
-
 If not at the top of the file use **camelCase**.
-
 `class` should be **PascalCasing ** ->  `MyClass`.
-
 `functions` should be **camelCase**  -> `myFunction`.
-
 Function names should always relfect what the function is intended to do.
+File names should be **camelCase**  -> `myFile.js`.
+
 
 ### Comparisons
 Use === instead of ==
@@ -61,6 +58,47 @@ Although this is optional in JavaScript as semicolons are not needed as statemen
 > const VAT_PERCENT = 20;  
 > let amount = 10;  
 > return addVat(amount, vatPercent);
+
+### Reduce nesting
+An `if` within `if` can get messy and very hard to read, very quickly. Sometimes you may not be able to get around but always have a look at the structure of your JavaScript to see if you can change it around.
+> **Fail**
+    if (myNumber > 0) {  
+	    if (myNumber > 100) {  
+		    if (!hasDiscountAlready) {  
+				 return addDiscountPercent(0);  
+		    } else {  
+			    return addDiscountPercent(10);  
+		    }  
+	    } else if (myNumber > 50) {  
+		    if (!hasDiscountAlready) {  
+			    return addDiscountPercent(5);  
+		    }  
+	    } else {  
+		    if (!hasDiscountAlready) {  
+			    return addDiscountPercent(0);  
+		    } else {  
+			    return addDiscountPercent(1);  
+		    }  
+	    }  
+    } else {  
+	    error();  
+    }
+
+> **Pass**
+
+    if (myNumber <= 0) {  
+       return error;  
+    }
+    if (!hasDiscountAlready) {  
+        return addDiscountPercent(0);  
+    }
+    if (myNumber > 100) {   
+        return addDiscountPercent(10);  
+    }
+    if (myNumber > 50) {   
+        return addDiscountPercent(5);  
+    }
+    return addDiscountPercent(1);
 
 # PHP
 
