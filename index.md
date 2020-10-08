@@ -12,9 +12,13 @@ Use [Can I Use](https://caniuse.com/) to check browser support for any required 
 ### Naming Conventions
 
 `let` should be **camelCase**.
+
 `const` if at the top of a file use upper case **snake case** -> `MY_CONST` . 
+
 If not at the top of the file use **camelCase**.
+
 `class` should be **PascalCasing ** ->  `MyClass`.
+
 `functions` should be **camelCase**  -> `myFunction`.
 
 Function names should always relfect what the function is intended to do.
